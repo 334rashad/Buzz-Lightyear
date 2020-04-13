@@ -6,7 +6,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [SerializeField] float playerMoveSpeed = 15f;
-    [SerializeField] float padding = 1f;
+    [SerializeField] float padding = .5f;
 
     float xMin;
     float xMax;
@@ -39,7 +39,7 @@ public class Player : MonoBehaviour
         var deltaY = Input.GetAxis("Vertical") * Time.deltaTime * playerMoveSpeed;
 
         var newXPosition = Mathf.Clamp(transform.position.x + deltaX, xMin, xMax);
-        var newYPosition = Mathf.Clamp(transform.position.x + deltaY, yMin, xMax);
+        var newYPosition = Mathf.Clamp(transform.position.y + deltaY, yMin, yMax);
 
         transform.position = new Vector2(newXPosition, newYPosition);
     }
