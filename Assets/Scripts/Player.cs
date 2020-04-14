@@ -5,8 +5,10 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    //configuration parameters
     [SerializeField] float playerMoveSpeed = 15f;
     [SerializeField] float padding = .5f;
+    [SerializeField] GameObject laserPrefab;
 
     float xMin;
     float xMax;
@@ -18,19 +20,18 @@ public class Player : MonoBehaviour
         SetUpMoveBoundaries();
     }
 
-    private void SetUpMoveBoundaries()
-    {
-        Camera gameCamera = Camera.main;
-        xMin = gameCamera.ViewportToWorldPoint(new Vector3(0, 0, 0)).x + padding;
-        xMax = gameCamera.ViewportToWorldPoint(new Vector3(1, 0, 0)).x - padding;
-        yMin = gameCamera.ViewportToWorldPoint(new Vector3(0, 0, 0)).y + padding;
-        yMax = gameCamera.ViewportToWorldPoint(new Vector3(0, 1, 0)).y - padding;
-    }
+
 
     // Update is called once per frame
     void Update()
     {
         Move();
+        Fire();
+    }
+
+    private void Fire()
+    {
+        if (Input.GetButtonDown(null)) { }
     }
 
     private void Move()
@@ -42,5 +43,14 @@ public class Player : MonoBehaviour
         var newYPosition = Mathf.Clamp(transform.position.y + deltaY, yMin, yMax);
 
         transform.position = new Vector2(newXPosition, newYPosition);
+    }
+
+    private void SetUpMoveBoundaries()
+    {
+        Camera gameCamera = Camera.main;
+        xMin = gameCamera.ViewportToWorldPoint(new Vector3(0, 0, 0)).x + padding;
+        xMax = gameCamera.ViewportToWorldPoint(new Vector3(1, 0, 0)).x - padding;
+        yMin = gameCamera.ViewportToWorldPoint(new Vector3(0, 0, 0)).y + padding;
+        yMax = gameCamera.ViewportToWorldPoint(new Vector3(0, 1, 0)).y - padding;
     }
 }
