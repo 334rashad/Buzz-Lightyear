@@ -95,6 +95,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waypoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 7293190962072165743, guid: 0be5932094013ea47ae8193882278797, type: 3}
+  - {fileID: 4358366111153232987, guid: 2a58a347c6ab1664286c4fb6739b379a, type: 3}
+  - {fileID: 473617903073714966, guid: de3e166bb6b9a874bac639f2ba330711, type: 3}
+  enemyMoveSpeed: 3
