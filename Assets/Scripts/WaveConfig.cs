@@ -23,7 +23,7 @@ public class WaveConfig : ScriptableObject
         }
         return waveWaypoints; 
     }
-public float TimeBetweenSpawns { get => timeBetweenSpawns; set => timeBetweenSpawns = value; }
+    public float TimeBetweenSpawns { get => timeBetweenSpawns; set => timeBetweenSpawns = value; }
     public float SpawnRandomFactor { get => spawnRandomFactor; set => spawnRandomFactor = value; }
     public int NumberOfEnemies { get => numberOfEnemies; set => numberOfEnemies = value; }
     public float MovingSpeed { get => movingSpeed; set => movingSpeed = value; }
