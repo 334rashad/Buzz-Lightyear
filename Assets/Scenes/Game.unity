@@ -533,6 +533,9 @@ MonoBehaviour:
   waveConfigs:
   - {fileID: 11400000, guid: 79b62c989ce4812488cf5aeab0dd7679, type: 2}
   - {fileID: 11400000, guid: fc2b39639a13a0b478ec7e62de890225, type: 2}
+  - {fileID: 11400000, guid: cf86d78366ed0e44e99762c142705858, type: 2}
+  - {fileID: 11400000, guid: ee27e52aaf4f50940860f57f03f21d57, type: 2}
+  startingWave: 0
 --- !u!4 &1273744261
 Transform:
   m_ObjectHideFlags: 0
