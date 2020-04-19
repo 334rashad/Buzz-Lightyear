@@ -430,11 +430,6 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5243909377668304323, guid: 1e8e83ed11b7deb43a6f4634e5dd9d23,
         type: 3}
-      propertyPath: projectileSpeed
-      value: 17
-      objectReference: {fileID: 0}
-    - target: {fileID: 5243909377668304323, guid: 1e8e83ed11b7deb43a6f4634e5dd9d23,
-        type: 3}
       propertyPath: laserPrefab
       value: 
       objectReference: {fileID: 939588855679883589, guid: 3dc17a1ec0a88b9449f91d85d064c8a8,
@@ -536,7 +531,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: cf86d78366ed0e44e99762c142705858, type: 2}
   - {fileID: 11400000, guid: ee27e52aaf4f50940860f57f03f21d57, type: 2}
   startingWave: 0
-  loop: 0
+  loop: 1
 --- !u!4 &1273744261
 Transform:
   m_ObjectHideFlags: 0
