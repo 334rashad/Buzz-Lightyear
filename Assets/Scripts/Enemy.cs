@@ -5,6 +5,9 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     [SerializeField] float health = 100f;
+    [SerializeField] float shotCounter;
+    [SerializeField] float minTimeBetweenShots = .2f;
+    [SerializeField] float mazTimeBetweenShots = 3f;
 
     // Start is called before the first frame update
     void Start()
