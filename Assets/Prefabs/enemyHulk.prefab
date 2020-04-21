@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2501548389165060031}
   - component: {fileID: 2609928987044485570}
   - component: {fileID: 3617173252765819527}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: enemyHulk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
