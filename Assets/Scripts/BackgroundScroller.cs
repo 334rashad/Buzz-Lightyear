@@ -5,7 +5,7 @@ using UnityEngine;
 public class BackgroundScroller : MonoBehaviour
 {
 
-    [SerializeField] float backgroundScrollSpeed = 0.2f;
+    [SerializeField] float backgroundScrollSpeed = 0.1f;
     Material material;
     Vector2 offset;
 
