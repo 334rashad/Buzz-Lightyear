@@ -13,6 +13,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] float durationOfExplosion = 0.5f;
     [SerializeField] GameObject projectile;
     [SerializeField] GameObject destroyVFX;
+    [SerializeField] AudioClip destroySFX;
 
     // Start is called before the first frame update
     void Start()
@@ -68,5 +69,6 @@ public class Enemy : MonoBehaviour
         Destroy(gameObject);
         GameObject explosion = Instantiate(destroyVFX, transform.position, transform.rotation);
         Destroy(explosion, durationOfExplosion);
+        AudioSource.PlayClipAtPoint(destroySFX, transform.position);
     }
 }
