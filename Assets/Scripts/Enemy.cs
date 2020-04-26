@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    [Header("Enemy settings")]
     [SerializeField] float health = 100f;
     [SerializeField] float shotCounter;
     [SerializeField] float minTimeBetweenShots = .2f;
@@ -13,7 +14,12 @@ public class Enemy : MonoBehaviour
     [SerializeField] float durationOfExplosion = 0.5f;
     [SerializeField] GameObject projectile;
     [SerializeField] GameObject destroyVFX;
+
+    [Header("Sound settings")]
     [SerializeField] AudioClip destroySFX;
+    [SerializeField] [Range(0,1)] float destroyVolume = 0.7f;
+    [SerializeField] AudioClip laserSFX;
+    [SerializeField] [Range(0, 1)] float laserSoundVolume = 0.2f;
 
     // Start is called before the first frame update
     void Start()
@@ -44,6 +50,8 @@ public class Enemy : MonoBehaviour
             transform.position, 
             Quaternion.identity) as GameObject;
         enemyLaser.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -projectileSpeed);
+        AudioSource.PlayClipAtPoint(laserSFX, Camera.main.transform.position, laserSoundVolume);
+
     }
 
     private void OnTriggerEnter2D(Collider2D others)
@@ -69,6 +77,6 @@ public class Enemy : MonoBehaviour
         Destroy(gameObject);
         GameObject explosion = Instantiate(destroyVFX, transform.position, transform.rotation);
         Destroy(explosion, durationOfExplosion);
-        AudioSource.PlayClipAtPoint(destroySFX, transform.position);
+        AudioSource.PlayClipAtPoint(destroySFX, Camera.main.transform.position, destroyVolume);
     }
 }

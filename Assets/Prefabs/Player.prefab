@@ -98,6 +98,10 @@ MonoBehaviour:
   playerMoveSpeed: 15
   padding: 0.5
   health: 300
+  destroySFX: {fileID: 8300000, guid: 810f534f181ceff41acf48db461ebb54, type: 3}
+  laserSFX: {fileID: 8300000, guid: 55099405bd45c76498b98d7ec5375fa8, type: 3}
+  destroyVolume: 1
+  laserSoundVolume: 0.031
   laserPrefab: {fileID: 939588855679883589, guid: 3dc17a1ec0a88b9449f91d85d064c8a8,
     type: 3}
   projectileSpeed: 15

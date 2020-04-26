@@ -118,6 +118,10 @@ MonoBehaviour:
     type: 3}
   destroyVFX: {fileID: 98872376211390370, guid: d7121f170c29f304b865f72bf6ece928,
     type: 3}
+  destroySFX: {fileID: 8300000, guid: e8a37e72d8775f0449791e5ca854735f, type: 3}
+  destroyVolume: 0.7
+  laserSFX: {fileID: 8300000, guid: 697a5d947c0d837479558f98f1c1534d, type: 3}
+  laserSoundVolume: 0.2
 --- !u!58 &-5428162557143271392
 CircleCollider2D:
   m_ObjectHideFlags: 0
