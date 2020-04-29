@@ -17,7 +17,13 @@ public class LevelLoader : MonoBehaviour
 
     public void LoadGameOver()
     {
+        StartCoroutine(WaitAndLoad());
         SceneManager.LoadScene("Game Over");
+    }
+
+    IEnumerator WaitAndLoad()
+    {
+
     }
     public void QiutGame()
     {

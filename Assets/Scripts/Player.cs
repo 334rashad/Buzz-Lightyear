@@ -107,6 +107,7 @@ public class Player : MonoBehaviour
 
     private void DestroyPlayer()
     {
+        FindObjectOfType<LevelLoader>().LoadGameOver();
         Destroy(gameObject);
         AudioSource.PlayClipAtPoint(destroySFX, Camera.main.transform.position, destroyVolume);
     }
