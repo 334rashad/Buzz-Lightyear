@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
     [Header("Player settings")]
     [SerializeField] float playerMoveSpeed = 15f;
     [SerializeField] float padding = .5f;
-    [SerializeField] float health = 300f;
+    [SerializeField] int health = 300;
     [SerializeField] AudioClip destroySFX;
     [SerializeField] AudioClip laserSFX;
     [SerializeField] [Range(0, 1)] float destroyVolume = 0.7f;
@@ -110,5 +110,10 @@ public class Player : MonoBehaviour
         FindObjectOfType<LevelLoader>().LoadGameOver();
         Destroy(gameObject);
         AudioSource.PlayClipAtPoint(destroySFX, Camera.main.transform.position, destroyVolume);
+    }
+
+    public int GetHealth()
+    {
+        return health;
     }
 }

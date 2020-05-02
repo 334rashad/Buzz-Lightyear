@@ -7,7 +7,6 @@ public class GameSession : MonoBehaviour
 {
 
     int score = 0;
-    int health = 0;
 
     private void Awake()
     {
@@ -24,11 +23,6 @@ public class GameSession : MonoBehaviour
     public int GetScore()
     {
         return score;
-    }
-
-    public int GetText()
-    {
-        return health;
     }
 
     public void AddToScore(int points)

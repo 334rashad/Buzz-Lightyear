@@ -1,21 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HealthDisplay : MonoBehaviour
 {
-    Text scoreText;
-    GameSession gameSession;
+    Text healthText;
+    Player player;
     // Start is called before the first frame update
     void Start()
     {
-        scoreText = GetComponent<Text>();
-        gameSession = FindObjectOfType<GameSession>();
+        healthText = GetComponent<Text>();
+        player = FindObjectOfType<Player>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        scoreText.text = gameSession.GetScore().ToString();
+        healthText.text = player.GetHealth().ToString();
     }
 }
