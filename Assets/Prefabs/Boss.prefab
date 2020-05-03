@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 4983997713547559189}
   - component: {fileID: 2501548389165060031}
   - component: {fileID: 2609928987044485570}
-  - component: {fileID: 3617173252765819527}
   - component: {fileID: 1753627689747879114}
   - component: {fileID: -3276960910871300555}
+  - component: {fileID: 6607414796891843924}
   m_Layer: 9
   m_Name: Boss
   m_TagString: Untagged
@@ -30,7 +30,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3801944106786850979}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.765, y: -0.986, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -110,36 +110,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69c6eaedee61dc0489ebb5a65f1ee524, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 200
-  scoreValue: 100
-  minTimeBetweenShots: 0.2
-  maxTimeBetweenShots: 1
-  projectileSpeed: 10
+  health: 1250
+  scoreValue: 500
+  minTimeBetweenShots: 2
+  maxTimeBetweenShots: 3
+  projectileSpeed: 5
   durationOfExplosion: 0.5
-  projectile: {fileID: 1916350465930642479, guid: 45882ce52c8087f4385f07e76917d82f,
+  projectile: {fileID: 1916350465930642479, guid: a84f42a346af7824f97c0089313f28c9,
     type: 3}
   destroyVFX: {fileID: 98872376211390370, guid: d7121f170c29f304b865f72bf6ece928,
     type: 3}
-  destroySFX: {fileID: 8300000, guid: e8a37e72d8775f0449791e5ca854735f, type: 3}
+  destroySFX: {fileID: 8300000, guid: 1cd7e47021dd7ca40979d37be5de8dc7, type: 3}
   destroyVolume: 0.7
-  laserSFX: {fileID: 8300000, guid: de998a28c7778124fb9e85b5222e4ba7, type: 3}
+  laserSFX: {fileID: 8300000, guid: 69e650fdb0ea3b347965043a08e91d80, type: 3}
   laserSoundVolume: 0.2
---- !u!58 &3617173252765819527
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3801944106786850979}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.06762844}
-  serializedVersion: 2
-  m_Radius: 0.41737157
 --- !u!50 &1753627689747879114
 Rigidbody2D:
   serializedVersion: 4
@@ -174,3 +158,44 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 100
+--- !u!60 &6607414796891843924
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3801944106786850979}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.05, y: 2.1}
+    newSize: {x: 0.97, y: 0.84}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.125, y: 1.0500001}
+      - {x: 0.13315403, y: 0.8293028}
+      - {x: -0.14409709, y: 0.8284445}
+      - {x: -0.15492678, y: 1.0500002}
+      - {x: -0.48989415, y: 1.0581541}
+      - {x: -1.018573, y: 0.72655725}
+      - {x: -1.0239234, y: -0.49869967}
+      - {x: -0.3237537, y: -0.90365505}
+      - {x: -0.26939332, y: -1.0516706}
+      - {x: 0.2692033, y: -1.0553694}
+      - {x: 0.2768116, y: -1.0476522}
+      - {x: 0.33941615, y: -0.91170263}
+      - {x: 1.021753, y: -0.49240208}
+      - {x: 1.0236343, y: 0.7087693}
+      - {x: 0.481398, y: 1.0549555}
+      - {x: 0.15911603, y: 1.0527182}
